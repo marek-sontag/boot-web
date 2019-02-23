@@ -8,6 +8,10 @@ public class MyController {
 
     @RequestMapping("/")
     public String hello() {
-        return "Hello Spring Boot! It's really awesome!";
+        Course course = new Course();
+        course.setName("SDA Java course");
+        course.setLocation("Katowice");
+        course.setMembersCount(18);
+        return "Welcome on course: " + course;
     }
 }
